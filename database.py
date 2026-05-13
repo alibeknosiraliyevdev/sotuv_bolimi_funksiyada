@@ -359,10 +359,9 @@ finance= {
 
 
 
-
+########################################################      Foyda     ###############################################
 def finance_info():
     return finance  
-
 
 """
 {
@@ -373,6 +372,7 @@ def finance_info():
 "total":60000
 }
 """
+########################################################     History    ##############################################
 
 history= [
     
@@ -381,10 +381,6 @@ history= [
 
 def history_info():
     return history
-
-
-
-
 
 ######################################################## Add product ###############################################
 add_product_database = {}
@@ -402,7 +398,6 @@ for family, products in default_database.items():
         }
 def add_product_database_info():
     return add_product_database
-
 ######################################################## Sell product ##############################################
 sell_product_database = {}
 for family, products in default_database.items():
