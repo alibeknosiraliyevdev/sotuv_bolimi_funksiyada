@@ -386,9 +386,8 @@ def history_info():
 
 
 
-
+######################################################## Add product ###############################################
 add_product_database = {}
-
 for family, products in default_database.items():
     add_product_database[family] = {}
 
@@ -401,22 +400,22 @@ for family, products in default_database.items():
             "sell_price": 0,
             "unit": unit
         }
-
-
-
 def add_product_database_info():
     return add_product_database
 
+######################################################## Sell product ##############################################
+sell_product_database = {}
+for family, products in default_database.items():
+    sell_product_database[family] = {}
 
+    for product, info in products.items():
+        unit = info["unit"] if info["unit"] == "kg" else "piece"
 
-
-sell_product_database = {
-    
-}
-
-
-
-
-
+        sell_product_database[family][product] = {
+            "quantity": 0,
+            "buy_price": 0,
+            "sell_price": 0,
+            "unit": unit
+        }
 def sell_product_database_info():
     return sell_product_database
