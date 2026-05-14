@@ -1,5 +1,7 @@
 from .buy_section import add_product
+from .sell_section import sell_product
 from .report_section import admin_panel
+from .decarators import log_decarator
 # add_product_kiritish=add_product()
 print("Sotuv bo'limizga xush kelibsiz!" .center(135))
 while True:
@@ -22,8 +24,21 @@ while True:
         )
         print("Mahsulot qo'shildi!")
 ###################################################### Sell bo'limi kiritish #########################################
-
-
+    elif menu == 2:
+        # product_family, product_name, quantity, buy_price, sell_price, unit
+        sell_product_kiritish=input("Oilasi , nomi, miqdori, sotiladigan narxi, birligi: \n")
+        if sell_product_kiritish=='0':
+            continue
+        product_family, product_name, mahsulotimiz_miqdori, sell_price, unit = sell_product_kiritish.split(",")
+        result=sell_product(
+            product_family.strip(),
+            product_name.strip(),
+            int(mahsulotimiz_miqdori),
+            float(sell_price),
+            unit.strip()
+        )
+        if result:
+            print("Mahsulot sotildi!")
 
 
 

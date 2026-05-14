@@ -408,7 +408,6 @@ for family, products in default_database.items():
 
         sell_product_database[family][product] = {
             "quantity": 0,
-            "buy_price": 0,
             "sell_price": 0,
             "unit": unit
         }

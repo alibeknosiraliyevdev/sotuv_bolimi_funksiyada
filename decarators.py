@@ -9,6 +9,13 @@ def log_decarator(func):
             
             print(f"[INFO] Yangi mahsulot qo'shildi.Mahsulot oilasi {args[0]}, mahsulot nomi {args[1]}, miqdori {args[2]}, buy price {args[3]}, sell price {args[4]}, unit {args[5]}")
             return result
+        elif func.__name__ == "sell_product":
+            print(f"[INFO] Mahsulot sotilish jarayonida:")
+            
+            result = func(*args, **kwargs) 
+            if result:
+                print(f"[INFO] Mahsulot sotildi.Mahsulot oilasi {args[0]}, mahsulot nomi {args[1]}, miqdori {args[2]}, sell price {args[3]}, unit {args[4]}")
+            return result
 
         
     return wrapper
