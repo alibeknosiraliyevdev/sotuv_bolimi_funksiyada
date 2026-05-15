@@ -62,6 +62,8 @@ def add_product(product_family, product_name, quantity, buy_price, sell_price, u
     else:
         default_database[product_family][product_name]["quantity"] += quantity
         
+        add_product_database[product_family][product_name]["buy_price"] = buy_price
+        add_product_database[product_family][product_name]["sell_price"] = sell_price
         add_product_database[product_family][product_name]["quantity"] += quantity
         
         finance["income"] += quantity * buy_price
