@@ -61,7 +61,7 @@ def add_product(product_family, product_name, quantity, buy_price, sell_price, u
     # Agar product family va name mavjud bo'lsa
     else:
         default_database[product_family][product_name]["quantity"] += quantity
-        
+
         add_product_database[product_family][product_name]["buy_price"] = buy_price
         add_product_database[product_family][product_name]["sell_price"] = sell_price
         add_product_database[product_family][product_name]["quantity"] += quantity
@@ -69,16 +69,5 @@ def add_product(product_family, product_name, quantity, buy_price, sell_price, u
         finance["income"] += quantity * buy_price
         add_action("buy", product_name, quantity, buy_price)
     
-        
-
-# add_product("Drinks", "Kola", 100, 9000, 12000, "piece")
-
-# print('\n\nQo\'shimcha ma\'lumotlar:\n\n')
-
-# print(default_database, "\n\n\n\n")
-# print(add_product_database)
-# print(finance)
-# print(see_history())
-       
     
 
