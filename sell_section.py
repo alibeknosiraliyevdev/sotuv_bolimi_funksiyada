@@ -32,16 +32,3 @@ def sell_product(product_family, product_name, quantity, sell_price,unit):
     finance["income"] += quantity * sell_price
     add_action("sell", product_name, quantity, sell_price)
     return True
-        
-
-# add_product("Drinks", "Kola", 100, 9000, 12000, "piece")
-
-# print('\n\nQo\'shimcha ma\'lumotlar:\n\n')
-
-# print(default_database, "\n\n\n\n")
-# print(add_product_database)
-# print(finance)
-# print(see_history())
-       
-    
-
